@@ -1,0 +1,13 @@
+Sub FillInformations()
+Dim ws As Worksheet
+Dim Index As Integer
+Set ws = ThisWorkbook.Sheets("Exo 2")
+
+For Index = 4 To 14
+    If Range("J3").Value = ws.Range("B" & Index) And Range("J4").Value = ws.Range("C" & Index) Then
+        Range("J10").Value = ws.Range("D" & Index).Value  '' Remplissage de l'âge
+        Range("J11").Value = ws.Range("E" & Index).Value  '' Remplissage du sexe
+        Range("J12").Value = ws.Range("F" & Index).Value  '' Remplissage du salaire
+    End If
+    Next Index
+End Sub
