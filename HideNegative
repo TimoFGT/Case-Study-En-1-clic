@@ -1,0 +1,9 @@
+Sub HideNegative()
+Set ws = ThisWorkbook.Sheets("Exo 1")
+Set Cellules = ws.Range("B2:B" & ws.Cells(ws.Rows.Count, "B").End(xlUp).Row)
+    For Each cell In Cellules
+        If cell.Value < 0 Then
+            cell.EntireRow.Hidden = True
+        End If
+    Next cell
+End Sub
